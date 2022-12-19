@@ -1,8 +1,10 @@
 <?php
+
 require_once('signup.php');
 $data = new People();
 $data->setID($_GET['id']);
-if(isset($_POST['edit'])){
+
+if(isset($_POST['edit'])) {
     $data->setName($_POST['name']);
     $data->setSurname($_POST['surname']);
     $data->setBirthday($_POST['birthday']);
@@ -15,10 +17,12 @@ if(isset($_POST['edit'])){
 
 $record = $data->fetchOne();
 $val = $record[0];
+
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
@@ -28,6 +32,7 @@ $val = $record[0];
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <h3>Update data</h3>
     <div>
@@ -50,5 +55,6 @@ $val = $record[0];
             <input type="submit" value="EDIT" name="edit"/>
         </form>  
     </div>
+    
 </body>
 </html>

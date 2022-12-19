@@ -15,12 +15,16 @@ $all = $data->fetchAll();
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC">
     <title>Document</title>
 </head>
+
 <body>
+
 <h2>List</h2>
+
 <center>
     <a class="btn btn-success" href="index.php">add New people</a>
     <br>
 </center>
+
 <br>
 <table>
     <tr>
@@ -31,8 +35,9 @@ $all = $data->fetchAll();
         <th>city</th>
         <th>action</th>
     </tr>
+
     <?
-foreach($all as $key => $val){
+foreach($all as $key => $val) {
     ?>
     <tr>
         <td><?=$val['name']?></td>
@@ -42,9 +47,9 @@ foreach($all as $key => $val){
             echo $age . ' years';?></td>
         <td><?if($val['gender']==1){
             echo 'M';
-        } else{
+        } else {
             echo 'F';
-        }$val['gender']?></td>
+        } $val['gender']?></td>
         <td><?=$val['city']?></td>
         <td><a class="btn btn-danger" href="delete.php?id=<?=$val['id']?>&req=delete">DELETE</a>
         <a class="btn btn-warning" href="edit.php?id=<?=$val['id']?>">EDIT</a>
@@ -53,6 +58,7 @@ foreach($all as $key => $val){
 <?
 }
 ?>
+
 </table>
 </body>
 </html>

@@ -1,5 +1,7 @@
 <?php
-if(isset($_POST['save'])){
+
+if(isset($_POST['save'])) {
+    
     require_once("signup.php");
     $sc = new People();
 

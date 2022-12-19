@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,7 +10,9 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC">
     <title>Document</title>
 </head>
+
 <body>
+    
     <h3>Add new people</h3>
     <p>The number 1 in the 'gender' field is male, the other is female</p>
 
@@ -33,5 +36,6 @@
             <input type="submit" value="Save" name="save"/>
         </form>
     </div>
+
 </body>
 </html>
